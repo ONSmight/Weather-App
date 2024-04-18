@@ -7,17 +7,18 @@ sealed class WeatherBlocState extends Equatable {
   List<Object> get props => [];
 }
 
-final class WeatherBlocInitial extends WeatherBlocState {}
+// Define subclasses of WeatherBlocState for different states
+class WeatherBlocInitial extends WeatherBlocState {} // Initial state
 
-final class WeatherBlocLoading extends WeatherBlocState {}
+class WeatherBlocLoading extends WeatherBlocState {} // Loading state
 
-final class WeatherBlocFailure extends WeatherBlocState {}
+class WeatherBlocFailure extends WeatherBlocState {} // Failure state
 
-final class WeatherBlocSuccess extends WeatherBlocState {
-  final Weather weather;
+class WeatherBlocSuccess extends WeatherBlocState {
+  final Weather weather; // Weather data for success state
 
-  const WeatherBlocSuccess(this.weather);
+  const WeatherBlocSuccess(this.weather); // Constructor
 
   @override
-  List<Object> get props => [weather];
+  List<Object> get props => [weather]; // Override props for comparison
 }
