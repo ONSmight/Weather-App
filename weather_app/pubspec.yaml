@@ -1,0 +1,38 @@
+name: weather_app
+description: "A Weather app that gives the current location, date, temp, humidity, wind speed, minimum temperature and maximum temperature."
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: '>=3.2.6 <4.0.0'
+
+dependencies:
+  bloc: ^8.1.4
+  equatable: ^2.0.5
+  flutter:
+    sdk: flutter
+  flutter_bloc: ^8.1.5
+  geolocator: ^11.0.0
+  intl: ^0.19.0
+  permission_handler: ^11.3.1
+  provider: ^6.1.2
+  weather: ^3.1.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+  flutter_launcher_icons: "^0.13.1"
+
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/weather-app.png"
+
+
+flutter:
+  uses-material-design: true
+  
+  assets:
+    - assets/
+
